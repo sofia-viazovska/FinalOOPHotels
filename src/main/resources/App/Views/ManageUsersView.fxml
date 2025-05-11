@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="App.Controllers.ManageUsersController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text text="Manage Users" styleClass="welcome-title"/>
+    <Text text="Add, edit, or delete users" styleClass="welcome-subtitle"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="searchField" promptText="Search users..." HBox.hgrow="ALWAYS"/>
+        <Button text="Search" onAction="#handleSearch"/>
+    </HBox>
+
+    <TableView fx:id="usersTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="usernameColumn" text="Username"/>
+            <TableColumn fx:id="fullNameColumn" text="Full Name"/>
+            <TableColumn fx:id="emailColumn" text="Email"/>
+            <TableColumn fx:id="phoneColumn" text="Phone Number"/>
+            <TableColumn fx:id="adminColumn" text="Admin"/>
+            <TableColumn fx:id="bookingsColumn" text="Bookings"/>
+        </columns>
+    </TableView>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="passwordField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Full Name:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="fullNameField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Phone Number:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="phoneField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Admin:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="adminCheckBox" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Add" onAction="#handleAdd" styleClass="btn-primary"/>
+        <Button text="Update" onAction="#handleUpdate" styleClass="btn-secondary"/>
+        <Button text="Delete" onAction="#handleDelete" styleClass="btn-danger"/>
+        <Button text="Clear" onAction="#handleClear" styleClass="btn-info"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="View Bookings" onAction="#handleViewBookings" styleClass="btn-primary"/>
+        <Button text="Back" onAction="#handleBack" styleClass="btn-secondary"/>
+    </HBox>
+
+</VBox>

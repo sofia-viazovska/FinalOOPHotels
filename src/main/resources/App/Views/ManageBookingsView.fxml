@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="App.Controllers.ManageBookingsController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text text="Manage Bookings" styleClass="welcome-title"/>
+    <Text text="View, confirm, or cancel bookings" styleClass="welcome-subtitle"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Filter:"/>
+        <ComboBox fx:id="filterComboBox" promptText="All Bookings" HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="searchField" promptText="Search by user or hotel..." HBox.hgrow="ALWAYS"/>
+        <Button text="Search" onAction="#handleSearch"/>
+    </HBox>
+
+    <TableView fx:id="bookingsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID"/>
+            <TableColumn fx:id="userColumn" text="User"/>
+            <TableColumn fx:id="hotelColumn" text="Hotel"/>
+            <TableColumn fx:id="roomColumn" text="Room"/>
+            <TableColumn fx:id="checkInColumn" text="Check-in Date"/>
+            <TableColumn fx:id="checkOutColumn" text="Check-out Date"/>
+            <TableColumn fx:id="priceColumn" text="Total Price"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+        </columns>
+    </TableView>
+
+    <GridPane hgap="10" vgap="10" alignment="CENTER">
+        <Label text="User:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Label fx:id="userLabel" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Hotel:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Label fx:id="hotelLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Room:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <Label fx:id="roomLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Check-in Date:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="checkInDatePicker" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Check-out Date:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="checkOutDatePicker" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Status:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="confirmedCheckBox" text="Confirmed" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Update" onAction="#handleUpdate" styleClass="btn-primary"/>
+        <Button text="Confirm" onAction="#handleConfirm" styleClass="btn-secondary"/>
+        <Button text="Cancel Booking" onAction="#handleCancelBooking" styleClass="btn-danger"/>
+        <Button text="Clear" onAction="#handleClear" styleClass="btn-info"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Back" onAction="#handleBack" styleClass="btn-secondary"/>
+    </HBox>
+
+</VBox>

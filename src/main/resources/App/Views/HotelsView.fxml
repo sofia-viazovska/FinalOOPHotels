@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="App.Controllers.HotelsController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Search Hotels:"/>
+        <TextField fx:id="searchField" promptText="Enter hotel name" HBox.hgrow="ALWAYS"/>
+        <Button text="Search" onAction="#handleSearch"/>
+        <ComboBox fx:id="sortComboBox" promptText="Sort by"/>
+    </HBox>
+
+    <TableView fx:id="hotelsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name"/>
+            <TableColumn fx:id="locationColumn" text="Location"/>
+            <TableColumn fx:id="ratingColumn" text="Rating"/>
+            <TableColumn fx:id="descriptionColumn" text="Description"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="View Rooms" onAction="#handleViewRooms" styleClass="btn-primary"/>
+        <Button text="Back" onAction="#handleBack" styleClass="btn-secondary"/>
+    </HBox>
+
+</VBox>

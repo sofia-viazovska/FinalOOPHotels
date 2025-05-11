@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="App.Controllers.MyBookingsController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Text text="My Bookings" styleClass="welcome-title"/>
+    <Text fx:id="subtitleText" text="Manage your hotel reservations" styleClass="welcome-subtitle"/>
+
+    <TableView fx:id="bookingsTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="hotelColumn" text="Hotel"/>
+            <TableColumn fx:id="roomColumn" text="Room"/>
+            <TableColumn fx:id="checkInColumn" text="Check-in Date"/>
+            <TableColumn fx:id="checkOutColumn" text="Check-out Date"/>
+            <TableColumn fx:id="priceColumn" text="Total Price"/>
+            <TableColumn fx:id="statusColumn" text="Status"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Cancel Booking" onAction="#handleCancelBooking" styleClass="btn-danger"/>
+        <Button text="Back" onAction="#handleBack" styleClass="btn-secondary"/>
+    </HBox>
+
+</VBox>

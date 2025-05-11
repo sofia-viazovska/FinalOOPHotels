@@ -1,0 +1,11 @@
+Booking ID: ced767f7-75d4-473b-8758-8c6f3642a2f7
+User ID: 083eac58-5a91-4982-8d37-aeab5beed935
+Room ID: bc096b18-88d3-4773-aaf4-2fccd4a1062c
+Check-in Date: 2025-05-11
+Check-out Date: 2025-05-12
+Total Price: 100.0
+User Email: admin@hotel.com
+User Full Name: Administrator
+Hotel: Obshaga KPI
+Room Number: 101
+Room Type: Single

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="App.Controllers.MainController"
+            prefHeight="700.0" prefWidth="1000.0">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <MenuItem text="View Data Files" onAction="#handleViewDataFiles"/>
+                        <SeparatorMenuItem />
+                        <MenuItem text="Exit" onAction="#handleExit"/>
+                    </items>
+                </Menu>
+                <Menu text="View">
+                    <items>
+                        <MenuItem text="Hotels" onAction="#showHotelsView"/>
+                        <MenuItem text="My Bookings" onAction="#showMyBookingsView"/>
+                    </items>
+                </Menu>
+                <Menu text="Account">
+                    <items>
+                        <MenuItem text="Login" onAction="#showLoginView"/>
+                        <MenuItem text="Register" onAction="#showRegisterView"/>
+                        <MenuItem text="Logout" onAction="#handleLogout"/>
+                    </items>
+                </Menu>
+                <Menu text="Admin">
+                    <items>
+                        <MenuItem text="Manage Hotels" onAction="#showManageHotelsView"/>
+                        <MenuItem text="Manage Rooms" onAction="#showManageRoomsView"/>
+                        <MenuItem text="Manage Bookings" onAction="#showManageBookingsView"/>
+                        <MenuItem text="Manage Users" onAction="#showManageUsersView"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <StackPane fx:id="contentArea">
+            <!-- This area will be dynamically populated with different views -->
+            <VBox alignment="CENTER" spacing="20">
+                <Label text="Welcome to Hotel Booking System" styleClass="welcome-title"/>
+                <Label text="Please login or register to start booking hotels" styleClass="welcome-subtitle"/>
+                <HBox alignment="CENTER" spacing="20">
+                    <Button text="Login" onAction="#showLoginView" styleClass="btn-primary"/>
+                    <Button text="Register" onAction="#showRegisterView" styleClass="btn-secondary"/>
+                    <Button text="Browse Hotels" onAction="#showHotelsView" styleClass="btn-info"/>
+                </HBox>
+            </VBox>
+        </StackPane>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" styleClass="status-bar">
+            <Label fx:id="statusLabel" text="Not logged in"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Label text="Hotel Booking System v1.0"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
