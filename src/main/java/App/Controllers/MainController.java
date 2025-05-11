@@ -227,7 +227,12 @@ public class MainController {
     }
 
     private void showAdminRequiredAlert() {
-        showAlert("Admin Required", "You must be an administrator to access this feature.", Alert.AlertType.WARNING);
+        try {
+            java.awt.Desktop.getDesktop().browse(new java.net.URI("https://www.youtube.com/watch?v=dQw4w9WgXcQ"));
+        } catch (Exception e) {
+            e.printStackTrace();
+            showAlert("Error", "Could not open browser: " + e.getMessage(), Alert.AlertType.ERROR);
+        }
     }
 
     public void setCurrentUser(User user) {

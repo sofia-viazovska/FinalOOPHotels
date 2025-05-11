@@ -1,6 +1,7 @@
 module com.example.finaloophotels {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
     opens com.example.finaloophotels to javafx.fxml;
     exports com.example.finaloophotels;
