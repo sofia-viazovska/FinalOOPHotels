@@ -26,12 +26,14 @@ public class DataManager {
     private List<Hotel> hotels;
     private List<Room> rooms;
     private List<Booking> bookings;
+    private LinkedList<Hotel> recentlyViewedHotels;
 
     public DataManager() {
         this.users = new ArrayList<>();
         this.hotels = new ArrayList<>();
         this.rooms = new ArrayList<>();
         this.bookings = new ArrayList<>();
+        this.recentlyViewedHotels = new LinkedList<>();
         loadData();
 
         // Create default users if no users exist
@@ -863,5 +865,39 @@ public class DataManager {
                 }
             }
         }
+    }
+
+    /**
+     * Adds a hotel to the recently viewed hotels list.
+     * If the hotel is already in the list, it is moved to the front.
+     * The list is limited to the 5 most recently viewed hotels.
+     * @param hotel the hotel to add to the recently viewed list
+     */
+    public void addToRecentlyViewedHotels(Hotel hotel) {
+        // Remove the hotel if it's already in the list
+        recentlyViewedHotels.remove(hotel);
+
+        // Add the hotel to the front of the list
+        recentlyViewedHotels.add(0, hotel);
+
+        // Limit the list to 5 hotels
+        while (recentlyViewedHotels.size() > 5) {
+            recentlyViewedHotels.remove(recentlyViewedHotels.size() - 1);
+        }
+    }
+
+    /**
+     * Gets the list of recently viewed hotels.
+     * @return the list of recently viewed hotels
+     */
+    public LinkedList<Hotel> getRecentlyViewedHotels() {
+        return recentlyViewedHotels;
+    }
+
+    /**
+     * Clears the recently viewed hotels list.
+     */
+    public void clearRecentlyViewedHotels() {
+        recentlyViewedHotels.clear();
     }
 }

@@ -20,6 +20,10 @@
         <ComboBox fx:id="sortComboBox" promptText="Sort by"/>
     </HBox>
 
+    <TitledPane text="Recently Viewed Hotels" expanded="false" collapsible="true">
+        <ListView fx:id="recentlyViewedListView" maxHeight="150" />
+    </TitledPane>
+
     <TableView fx:id="hotelsTable" VBox.vgrow="ALWAYS">
         <columns>
             <TableColumn fx:id="nameColumn" text="Name"/>

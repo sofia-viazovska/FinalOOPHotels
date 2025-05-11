@@ -41,6 +41,9 @@ public class HotelsController {
     @FXML
     private TableColumn<Hotel, String> descriptionColumn;
 
+    @FXML
+    private ListView<Hotel> recentlyViewedListView;
+
     private MainController mainController;
     private DataManager dataManager;
     private ObservableList<Hotel> hotelsList = FXCollections.observableArrayList();
@@ -64,6 +67,33 @@ public class HotelsController {
 
         // Set default sort to Rating (High-Low) for better user experience
         sortComboBox.getSelectionModel().select("Rating (High-Low)");
+
+        // Set up the recently viewed hotels list view
+        recentlyViewedListView.setCellFactory(param -> new ListCell<Hotel>() {
+            @Override
+            protected void updateItem(Hotel hotel, boolean empty) {
+                super.updateItem(hotel, empty);
+                if (empty || hotel == null) {
+                    setText(null);
+                } else {
+                    setText(hotel.getName() + " (" + hotel.getRating() + "★) - " + hotel.getLocation());
+                }
+            }
+        });
+
+        // Add listener to handle selection in the recently viewed list
+        recentlyViewedListView.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                // Select the hotel in the main table
+                for (Hotel hotel : hotelsTable.getItems()) {
+                    if (hotel.getId().equals(newVal.getId())) {
+                        hotelsTable.getSelectionModel().select(hotel);
+                        hotelsTable.scrollTo(hotel);
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     public void setMainController(MainController mainController) {
@@ -73,6 +103,27 @@ public class HotelsController {
         this.dataManager = mainController.getDataManager();
         // Load hotels from data manager
         loadHotels();
+        // Update the recently viewed hotels list
+        updateRecentlyViewedHotels();
+    }
+
+    /**
+     * Updates the recently viewed hotels list view with hotels from the data manager.
+     */
+    private void updateRecentlyViewedHotels() {
+        // Get the recently viewed hotels from the data manager
+        Models.DataStructures.LinkedList<Hotel> recentlyViewed = dataManager.getRecentlyViewedHotels();
+
+        // Clear the list view
+        ObservableList<Hotel> recentlyViewedList = FXCollections.observableArrayList();
+
+        // Add all recently viewed hotels to the observable list
+        for (Hotel hotel : recentlyViewed) {
+            recentlyViewedList.add(hotel);
+        }
+
+        // Set the list view items
+        recentlyViewedListView.setItems(recentlyViewedList);
     }
 
     private void loadHotels() {
@@ -144,6 +195,11 @@ public class HotelsController {
             showAlert("No Selection", "Please select a hotel to view its rooms.", Alert.AlertType.WARNING);
             return;
         }
+
+        // Add the selected hotel to the recently viewed list
+        dataManager.addToRecentlyViewedHotels(selectedHotel);
+        // Update the recently viewed hotels list
+        updateRecentlyViewedHotels();
 
         try {
             // Load the rooms view FXML
