@@ -78,10 +78,10 @@ public class ManageHotelsController {
         // Set up the rating combo box
         ratingComboBox.getItems().addAll(1, 2, 3, 4, 5);
 
-        // Set default sort to Rating
+        // Set the default sort to Rating
         sortComboBox.getSelectionModel().select("Rating (High-Low)");
 
-        // Set up table selection listener
+        // Set up the table selection listener
         hotelsTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 selectedHotel = newVal;
@@ -110,7 +110,7 @@ public class ManageHotelsController {
     private void handleSearch() {
         String searchTerm = searchField.getText().trim().toLowerCase();
         if (searchTerm.isEmpty()) {
-            loadHotels(); // If search is empty, load all hotels
+            loadHotels(); // If the search is empty, load all hotels
             return;
         }
 
@@ -150,7 +150,7 @@ public class ManageHotelsController {
             return;
         }
 
-        // Create new hotel
+        // Create a new hotel
         String name = nameField.getText().trim();
         String location = locationField.getText().trim();
         int rating = ratingComboBox.getValue();
@@ -179,7 +179,7 @@ public class ManageHotelsController {
             return;
         }
 
-        // Update hotel
+        // Update a hotel
         selectedHotel.setName(nameField.getText().trim());
         selectedHotel.setLocation(locationField.getText().trim());
         selectedHotel.setRating(ratingComboBox.getValue());

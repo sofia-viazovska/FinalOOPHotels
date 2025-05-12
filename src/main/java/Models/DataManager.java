@@ -3,13 +3,10 @@ package Models;
 import Models.DataStructures.LinkedList;
 import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 /**
  * Handles data persistence for the application.
@@ -37,12 +34,12 @@ public class DataManager {
         loadData();
 
         // Create default users if no users exist
-        if (users.isEmpty()) {
+        if (users.size() == 0) {
             createUser("admin", "admin123", "Administrator", "admin@hotel.com", "123-456-7890", true);
             System.out.println("Created default admin user: username=admin, password=admin123");
 
-            // Create a test user with username "testtt"
-            createUser("testtt", "password", "Test User", "test@hotel.com", "987-654-3210");
+            // Create a test user with the username "testtt"
+            createUser("testUser", "password", "Test User", "test@hotel.com", "987-654-3210");
             System.out.println("Created test user: username=testtt, password=password");
         }
 
@@ -101,7 +98,7 @@ public class DataManager {
 
             System.out.println("Created 40 sample hotels");
 
-            // Create sample rooms for Grand Hotel
+            // Create sample rooms for a Grand Hotel
             createRoom(grandHotel.getId(), "101", "Single", 150.0);
             createRoom(grandHotel.getId(), "102", "Double", 200.0);
             createRoom(grandHotel.getId(), "201", "Suite", 350.0);
@@ -227,7 +224,7 @@ public class DataManager {
             createRoom(romaPalazzo.getId(), "101", "Single", 250.0);
             createRoom(romaPalazzo.getId(), "102", "Double", 350.0);
             createRoom(romaPalazzo.getId(), "201", "Suite", 550.0);
-            // Create sample rooms for Barcelona Sea
+            // Create sample rooms for the Barcelona Sea
             createRoom(barcelonaSea.getId(), "101", "Single", 280.0);
             createRoom(barcelonaSea.getId(), "102", "Double", 380.0);
             createRoom(barcelonaSea.getId(), "201", "Suite", 580.0);
@@ -239,7 +236,7 @@ public class DataManager {
             createRoom(viennaClassic.getId(), "101", "Single", 300.0);
             createRoom(viennaClassic.getId(), "102", "Double", 400.0);
             createRoom(viennaClassic.getId(), "201", "Suite", 600.0);
-            // Create sample rooms for Amsterdam Canal
+            // Create sample rooms for the Amsterdam Canal
             createRoom(amsterdamCanal.getId(), "101", "Single", 270.0);
             createRoom(amsterdamCanal.getId(), "102", "Double", 370.0);
             createRoom(amsterdamCanal.getId(), "201", "Suite", 570.0);
@@ -247,7 +244,7 @@ public class DataManager {
             createRoom(pragueOld.getId(), "101", "Single", 260.0);
             createRoom(pragueOld.getId(), "102", "Double", 360.0);
             createRoom(pragueOld.getId(), "201", "Suite", 560.0);
-            // Create sample rooms for Budapest River
+            // Create sample rooms for the Budapest River
             createRoom(budapestRiver.getId(), "101", "Single", 290.0);
             createRoom(budapestRiver.getId(), "102", "Double", 390.0);
             createRoom(budapestRiver.getId(), "201", "Suite", 590.0);
@@ -414,10 +411,6 @@ public class DataManager {
         return null;
     }
 
-    public List<Room> getAllRooms() {
-        return new ArrayList<>(rooms);
-    }
-
     public List<Room> getRoomsByHotel(String hotelId) {
         List<Room> hotelRooms = new ArrayList<>();
         for (Room room : rooms) {
@@ -549,7 +542,7 @@ public class DataManager {
 
         // Restore User-Booking and Room-Booking relationships
         for (Booking booking : bookings) {
-            // Restore User-Booking relationship
+            // Restore the User-Booking relationship
             for (User user : users) {
                 if (booking.getUser() != null && booking.getUser().getId().equals(user.getId())) {
                     booking.setUser(user);
@@ -662,7 +655,7 @@ public class DataManager {
     }
 
     /**
-     * Generates a booking file name in the format "resert(username)(5randomnumbers).txt".
+     * Generates a booking file name in the format "resert(username)(5 random numbers).txt".
      * @param username the username of the booking user
      * @return the generated file name
      */
@@ -795,7 +788,7 @@ public class DataManager {
         Hotel cityInn = createHotel("City Inn", "Chicago", 3, "Affordable hotel in downtown Chicago");
         Hotel sunsetHotel = createHotel("Sunset Hotel", "Los Angeles", 5, "Elegant hotel with sunset views over the Pacific");
 
-        // Add rooms to Grand Hotel
+        // Add rooms to the Grand Hotel
         createRoom(grandHotel.getId(), "101", "Single", 150.0);
         createRoom(grandHotel.getId(), "102", "Double", 200.0);
         createRoom(grandHotel.getId(), "201", "Suite", 350.0);
@@ -831,9 +824,9 @@ public class DataManager {
      * @param filePath path to the file to delete
      */
     private void deleteFile(String filePath) {
-        // Create file object
+        // Create the file object
         File file = new File(filePath);
-        // Check if file exists before trying to delete
+        // Check if the file exists before trying to delete
         if (file.exists()) {
             boolean deleted = file.delete();
             if (deleted) {

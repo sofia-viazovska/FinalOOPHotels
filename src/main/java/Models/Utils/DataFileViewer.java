@@ -15,7 +15,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.nio.file.Files;
 import java.util.List;
 
 /**
@@ -29,21 +28,21 @@ public class DataFileViewer {
      * @param stage the parent stage for the file chooser dialog
      */
     public static void viewDataFile(Stage stage) {
-        // Create file chooser dialog
+        // Create a file chooser dialog
         FileChooser fileChooser = new FileChooser();
         // Set dialog title
         fileChooser.setTitle("Open Data File");
         // Show both .dat and .txt files
         fileChooser.getExtensionFilters().addAll(
-                new FileChooser.ExtensionFilter("All Data Files", "*.dat"/**, "*.txt"**/),
+                new FileChooser.ExtensionFilter("All Data Files", "*.dat"),
                 new FileChooser.ExtensionFilter("Data Files", "*.dat")
                 //new FileChooser.ExtensionFilter("Text Files", "*.txt")
         );
 
-        // Set initial directory to the project root
+        // Set an initial directory to the project root
         fileChooser.setInitialDirectory(new File(System.getProperty("user.dir")));
 
-        // Show file chooser dialog and get selected file
+        // Show a file chooser dialog and get the selected file
         File selectedFile = fileChooser.showOpenDialog(stage);
         if (selectedFile != null) {
             try {
@@ -52,7 +51,7 @@ public class DataFileViewer {
                 // Display the data in a dialog
                 showDataContent(selectedFile.getName(), content);
             } catch (Exception e) {
-                // Show error if file can't be read
+                // Show error if the file can't be read
                 showError("Error Reading File", "Could not read the selected file: " + e.getMessage());
             }
         }
@@ -66,33 +65,20 @@ public class DataFileViewer {
      * @throws ClassNotFoundException if the class of a serialized object cannot be found
      */
     private static String readDataFile(File file) throws IOException, ClassNotFoundException {
-        // Create string builder to store formatted content
+        // Create a string builder to store formatted content
         StringBuilder content = new StringBuilder();
-
-        // Check if it's a .txt file
-//        if (file.getName().endsWith(".txt")) {
-//            // Read text file directly
-//            content.append("File: ").append(file.getName()).append("\n\n");
-//
-//            List<String> lines = Files.readAllLines(file.toPath());
-//            for (String line : lines) {
-//                content.append(line).append("\n");
-//            }
-//
-//            return content.toString();
-//        }
 
         // Handle .dat files with serialized objects
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
-            // Read the object from file
+            // Read the object from the file
             Object obj = ois.readObject();
 
             // Check if the object is a list
             if (obj instanceof List<?>) {
                 List<?> list = (List<?>) obj;
                 if (!list.isEmpty()) {
-                    // Get first item to determine list type
-                    Object firstItem = list.get(0);
+                    // Get the first item to determine the list type
+                    Object firstItem = list.getFirst();
 
                     // Add file info to content
                     content.append("File: ").append(file.getName()).append("\n");
@@ -137,7 +123,7 @@ public class DataFileViewer {
                             content.append("Price: $").append(room.getPricePerNight()).append(" per night\n");
                             content.append("Available: ").append(room.isAvailable() ? "Yes" : "No").append("\n");
                             if (room.getHotel() != null) {
-                                // Show hotel name if available
+                                // Show the hotel name if available
                                 content.append("Hotel: ").append(room.getHotel().getName()).append("\n");
                             }
                             content.append("Bookings: ").append(room.getBookings().size()).append("\n");
@@ -188,12 +174,12 @@ public class DataFileViewer {
      * @param content the content to display
      */
     private static void showDataContent(String fileName, String content) {
-        // Create info dialog to show file contents
+        // Create an info dialog to show file contents
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Data File Viewer");
         alert.setHeaderText("Contents of " + fileName);
 
-        // Create text area to display content
+        // Create a text area to display content
         TextArea textArea = new TextArea(content);
         textArea.setEditable(false);
         textArea.setWrapText(true);
@@ -227,7 +213,7 @@ public class DataFileViewer {
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
-        // Show dialog and wait for user response
+        // Show the dialog and wait for the user response
         alert.showAndWait();
     }
 }

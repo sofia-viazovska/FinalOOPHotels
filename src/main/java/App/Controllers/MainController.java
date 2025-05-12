@@ -8,7 +8,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
@@ -30,6 +29,10 @@ public class MainController {
     private DataManager dataManager;
     private User currentUser;
 
+    /**
+     * Initializes the main controller.
+     * Sets up the data manager and shows the welcome view.
+     */
     @FXML
     private void initialize() {
         dataManager = Main.getDataManager();
@@ -254,10 +257,6 @@ public class MainController {
         } else {
             statusLabel.setText("Not logged in");
         }
-    }
-
-    private void showNotImplementedAlert(String feature) {
-        showAlert("Not Implemented", feature + " is not implemented yet.", Alert.AlertType.INFORMATION);
     }
 
     private void showLoginRequiredAlert() {

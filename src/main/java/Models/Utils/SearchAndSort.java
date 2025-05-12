@@ -12,7 +12,7 @@ import java.util.List;
 public class SearchAndSort {
 
     /**
-     * Sorts a list using merge sort algorithm.
+     * Sorts a list using a merge sort algorithm.
      *
      * @param <T> the type of elements in the list
      * @param list the list to be sorted
@@ -60,19 +60,19 @@ public class SearchAndSort {
         while (leftIndex < left.size() && rightIndex < right.size()) {
             // Compare current elements from both lists
             if (comparator.compare(left.get(leftIndex), right.get(rightIndex)) <= 0) {
-                // If left element is smaller or equal, add it to result
+                // If the left element is smaller or equal, add it to the result
                 result.add(left.get(leftIndex));
-                leftIndex++; // Move to next element in left list
+                leftIndex++; // Move to the next element in the left list
             } else {
-                // If right element is smaller, add it to result
+                // If the right element is smaller, add it to the result
                 result.add(right.get(rightIndex));
-                rightIndex++; // Move to next element in right list
+                rightIndex++; // Move to the next element in the right list
             }
         }
 
-        // Add any remaining elements from left list (if any)
+        // Add any remaining elements from the left list (if any)
         result.addAll(left.subList(leftIndex, left.size()));
-        // Add any remaining elements from right list (if any)
+        // Add any remaining elements from the right list (if any)
         result.addAll(right.subList(rightIndex, right.size()));
 
         return result;
@@ -102,10 +102,10 @@ public class SearchAndSort {
             int cmp = comparator.compare(midVal, key);
 
             if (cmp < 0) {
-                // If middle element is less than key, search in right half
+                // If the middle element is less than the key, search in the right half
                 low = mid + 1;
             } else if (cmp > 0) {
-                // If middle element is greater than key, search in left half
+                // If the middle element is greater than the key, search in the left half
                 high = mid - 1;
             } else {
                 // Key found at middle index
@@ -149,7 +149,7 @@ public class SearchAndSort {
      * @return the index of the hotel if found, otherwise -1
      */
     public static int searchHotelByName(List<Hotel> sortedHotels, String name) {
-        // Create a dummy hotel with the search name to use for comparison
+        // Create an example hotel with the search name to use for comparison
         // Other properties don't matter for name comparison
         Hotel searchHotel = new Hotel("", name, "", 0, "");
 

@@ -75,7 +75,7 @@ public class RoomsController {
         checkInDatePicker.setValue(today);
         checkOutDatePicker.setValue(today.plusDays(1));
 
-        // Add listeners to update total price when dates change
+        // Add listeners to update the total price when dates change
         checkInDatePicker.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalPrice());
         checkOutDatePicker.valueProperty().addListener((obs, oldVal, newVal) -> updateTotalPrice());
     }
@@ -112,7 +112,7 @@ public class RoomsController {
             return;
         }
 
-        // Check if user is logged in
+        // Check if the user is logged in
         User currentUser = mainController.getCurrentUser();
         if (currentUser == null) {
             showAlert("Login Required", "You must be logged in to book a room.", Alert.AlertType.WARNING);
@@ -167,7 +167,7 @@ public class RoomsController {
         Booking booking = dataManager.createBooking(currentUser.getId(), selectedRoom.getId(), checkIn, checkOut);
 
         if (booking != null) {
-            // Mark room as unavailable
+            // Mark the room as unavailable
             selectedRoom.setAvailable(false);
             dataManager.updateRoom(selectedRoom);
 

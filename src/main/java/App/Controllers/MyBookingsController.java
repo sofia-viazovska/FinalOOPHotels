@@ -14,7 +14,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 /**
- * Controller for the my bookings view.
+ * Controller for my bookings view.
  * Handles displaying and managing user bookings.
  */
 public class MyBookingsController {

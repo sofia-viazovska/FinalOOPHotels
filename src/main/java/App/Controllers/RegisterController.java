@@ -70,12 +70,12 @@ public class RegisterController {
             return;
         }
 
-        if (!email.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
+        if (!email.matches("^[\\w-]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
             errorLabel.setText("Invalid email format");
             return;
         }
 
-        // Check if username already exists
+        // Check if the username already exists
         DataManager dataManager = mainController.getDataManager();
         User existingUser = dataManager.getUserByUsername(username);
         if (existingUser != null) {
@@ -83,14 +83,14 @@ public class RegisterController {
             return;
         }
 
-        // Create new user
+        // Create a new user
         User newUser = dataManager.createUser(username, password, fullName, email, phone);
 
         if (newUser != null) {
             // Auto-login the new user
             mainController.setCurrentUser(newUser);
 
-            // Show welcome view
+            // Show a welcome view
             mainController.showWelcomeView();
         } else {
             errorLabel.setText("Failed to create user");

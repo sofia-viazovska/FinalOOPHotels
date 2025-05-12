@@ -19,13 +19,13 @@ public class Hotel implements Serializable, Comparable<Hotel> {
     private List<Room> rooms; // List of rooms in the hotel (one-to-many relationship)
 
     public Hotel(String id, String name, String location, int rating, String description) {
-        // Initialize hotel with all required properties
+        // Initialize the hotel with all required properties
         this.id = id;
         this.name = name;
         this.location = location;
         this.rating = rating;
         this.description = description;
-        this.rooms = new ArrayList<>(); // Initialize empty rooms list
+        this.rooms = new ArrayList<>(); // Initialize the empty rooms list
     }
 
     // Getters and setters
@@ -78,16 +78,16 @@ public class Hotel implements Serializable, Comparable<Hotel> {
     }
 
     public void addRoom(Room room) {
-        // Add room to hotel's list of rooms
+        // Add room to the hotel's list of rooms
         rooms.add(room);
         // Set this hotel as the owner of the room (bidirectional relationship)
         room.setHotel(this);
     }
 
     public void removeRoom(Room room) {
-        // Remove room from hotel's list
+        // Remove room from the hotel's list
         rooms.remove(room);
-        // Remove hotel reference from room (bidirectional relationship)
+        // Remove hotel reference from the room (bidirectional relationship)
         room.setHotel(null);
     }
 

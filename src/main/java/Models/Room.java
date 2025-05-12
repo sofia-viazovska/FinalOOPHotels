@@ -18,13 +18,13 @@ public class Room implements Serializable {
     private List<Booking> bookings; // List of bookings for this room (one-to-many relationship)
 
     public Room(String id, String roomNumber, String type, double pricePerNight) {
-        // Initialize room with all required properties
+        // Initialize a room with all required properties
         this.id = id;
         this.roomNumber = roomNumber;
         this.type = type;
         this.pricePerNight = pricePerNight;
         this.available = true; // Room is available by default
-        this.bookings = new ArrayList<>(); // Initialize empty bookings list
+        this.bookings = new ArrayList<>(); // Initialize an empty bookings list
     }
 
     // Getters and setters
@@ -85,14 +85,14 @@ public class Room implements Serializable {
     }
 
     public void addBooking(Booking booking) {
-        // Add booking to room's list of bookings
+        // Add booking to the room's list of bookings
         bookings.add(booking);
         // Set this room as the room for the booking (bidirectional relationship)
         booking.setRoom(this);
     }
 
     public void removeBooking(Booking booking) {
-        // Remove booking from room's list
+        // Remove booking from the room's list
         bookings.remove(booking);
         // Remove room reference from booking (bidirectional relationship)
         booking.setRoom(null);

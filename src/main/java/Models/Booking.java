@@ -89,18 +89,18 @@ public class Booking implements Serializable {
     private void calculateTotalPrice() {
         // Only calculate if all required data is available
         if (checkInDate != null && checkOutDate != null && room != null) {
-            // Calculate number of nights between check-in and check-out dates
+            // Calculate the number of nights between check-in and check-out dates
             long nights = ChronoUnit.DAYS.between(checkInDate, checkOutDate);
-            // Multiply number of nights by the room's price per night
+            // Multiply the number of nights by the room's price per night
             totalPrice = nights * room.getPricePerNight();
         }
-        // If any required data is missing, total price remains 0
+        // If any required data is missing, the total price remains 0
     }
 
     @Override
     public String toString() {
         // Return a detailed string representation of the booking
-        // Including user name, hotel name, room number, and dates
+        // Including username, hotel name, room number, and dates
         return "Booking for " + user.getFullName() + " at " + room.getHotel().getName() +
                ", Room " + room.getRoomNumber() + " from " + checkInDate + " to " + checkOutDate;
     }

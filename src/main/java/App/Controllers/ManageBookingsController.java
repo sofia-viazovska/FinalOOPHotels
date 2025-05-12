@@ -2,7 +2,6 @@ package App.Controllers;
 
 import Models.Booking;
 import Models.DataManager;
-import Models.User;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -107,7 +106,7 @@ public class ManageBookingsController {
             }
         });
 
-        // Set up table selection listener
+        // Set up the table selection listener
         bookingsTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 selectedBooking = newVal;

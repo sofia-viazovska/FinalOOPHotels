@@ -70,7 +70,7 @@ public class ManageRoomsController {
         // Set up the type combo box
         typeComboBox.getItems().addAll("Single", "Double", "Suite", "Family", "Deluxe", "Presidential Suite");
 
-        // Set up table selection listener
+        // Set up the table selection listener
         roomsTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 selectedRoom = newVal;
@@ -78,7 +78,7 @@ public class ManageRoomsController {
             }
         });
 
-        // Set up hotel combo box listener
+        // Set up the hotel combo box listener
         hotelComboBox.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 loadRoomsByHotel(newVal.getId());
@@ -126,7 +126,7 @@ public class ManageRoomsController {
             return;
         }
 
-        // Create new room
+        // Create a new room
         String roomNumber = roomNumberField.getText().trim();
         String type = typeComboBox.getValue();
         double price = Double.parseDouble(priceField.getText().trim());

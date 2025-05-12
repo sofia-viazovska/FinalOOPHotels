@@ -41,7 +41,7 @@ public class LoginController {
         // Get the data manager from the main controller
         DataManager dataManager = mainController.getDataManager();
 
-        // Check if user exists
+        // Check if a user exists
         User user = dataManager.getUserByUsername(username);
 
         if (user == null) {

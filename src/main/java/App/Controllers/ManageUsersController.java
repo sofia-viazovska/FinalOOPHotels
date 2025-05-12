@@ -82,7 +82,7 @@ public class ManageUsersController {
         bookingsColumn.setCellValueFactory(cellData ->
             new SimpleStringProperty(String.valueOf(cellData.getValue().getBookings().size())));
 
-        // Set up table selection listener
+        // Set up the table selection listener
         usersTable.getSelectionModel().selectedItemProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
                 selectedUser = newVal;
@@ -108,7 +108,7 @@ public class ManageUsersController {
     private void handleSearch() {
         String searchTerm = searchField.getText().trim().toLowerCase();
         if (searchTerm.isEmpty()) {
-            loadUsers(); // If search is empty, load all users
+            loadUsers(); // If the search is empty, load all users
             return;
         }
 
@@ -134,7 +134,7 @@ public class ManageUsersController {
             return;
         }
 
-        // Create new user
+        // Create a new user
         String username = usernameField.getText().trim();
         String password = passwordField.getText().trim();
         String fullName = fullNameField.getText().trim();
@@ -204,7 +204,7 @@ public class ManageUsersController {
 
         confirmAlert.showAndWait().ifPresent(response -> {
             if (response == ButtonType.OK) {
-                // Check if user has bookings
+                // Check if the user has bookings
                 if (!selectedUser.getBookings().isEmpty()) {
                     Alert warningAlert = new Alert(Alert.AlertType.WARNING);
                     warningAlert.setTitle("User Has Bookings");
@@ -307,7 +307,7 @@ public class ManageUsersController {
             return false;
         }
 
-        // Check if username already exists (for new users)
+        // Check if a username already exists (for new users)
         if (isNewUser) {
             User existingUser = dataManager.getUserByUsername(username);
             if (existingUser != null) {
@@ -317,7 +317,7 @@ public class ManageUsersController {
         }
 
         // Validate email format
-        if (!email.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
+        if (!email.matches("^[\\w-]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
             showAlert("Invalid Email", "Please enter a valid email address.", Alert.AlertType.WARNING);
             return false;
         }

@@ -196,9 +196,9 @@ public class LinkedList<T> implements Iterable<T>, Serializable {
     }
 
     /**
-     * Returns the index of the first occurrence of the specified element in the list.
+     * Returns the index of the first occurrence in the specified element in the list.
      * @param data The element to search for
-     * @return The index of the first occurrence of the element, or -1 if the element is not found
+     * @return The index of the first occurrence in the element, or -1 if the element is not found
      */
     public int indexOf(T data) {
         Node<T> current = head;
