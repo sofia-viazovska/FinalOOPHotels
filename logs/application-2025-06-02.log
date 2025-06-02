@@ -7,3 +7,369 @@ Logging system initialized at 2025-06-02 20:47:47
 2025-06-02 20:50:39 [INFO] DataManager.createRoom - EXIT - Result: Room 105 (Suite) - $135.0 per night (execution time: 144ms)
 2025-06-02 20:51:04 [INFO] ManageBookingsController.handleConfirm - ENTRY - Args: none
 2025-06-02 20:51:06 [INFO] ManageBookingsController.handleConfirm - EXIT - Result: null (execution time: 1195ms)
+Logging system initialized at 2025-06-02 21:56:49
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Grand Hotel, description=A luxury hotel in the heart of Manhattan, location=New York, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Grand Hotel (5 stars) - New York (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Seaside Resort, description=Beautiful beachfront resort with ocean views, location=Miami, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Seaside Resort (4 stars) - Miami (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Mountain Lodge, description=Cozy lodge with stunning mountain views, location=Aspen, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Mountain Lodge (4 stars) - Aspen (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=City Inn, description=Affordable hotel in downtown Chicago, location=Chicago, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: City Inn (3 stars) - Chicago (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Sunset Hotel, description=Elegant hotel with sunset views over the Pacific, location=Los Angeles, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Sunset Hotel (5 stars) - Los Angeles (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Kyiv Palace, description=Luxury hotel in the heart of Ukraine's capital, location=Kyiv, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Kyiv Palace (5 stars) - Kyiv (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Lviv Castle Hotel, description=Historic hotel in the cultural capital of Ukraine, location=Lviv, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Lviv Castle Hotel (4 stars) - Lviv (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Odesa Pearl, description=Beachfront luxury hotel on the Black Sea, location=Odesa, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Odesa Pearl (5 stars) - Odesa (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Kharkiv Plaza, description=Modern hotel in Ukraine's second-largest city, location=Kharkiv, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Kharkiv Plaza (4 stars) - Kharkiv (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Dnipro Hotel, description=Comfortable hotel overlooking the Dnipro River, location=Dnipro, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Dnipro Hotel (3 stars) - Dnipro (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Carpathian Lodge, description=Mountain resort in the Ukrainian Carpathians, location=Bukovel, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Carpathian Lodge (4 stars) - Bukovel (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Zaporozhye Inn, description=Cozy hotel near the Dnieper River, location=Zaporizhzhia, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Zaporozhye Inn (3 stars) - Zaporizhzhia (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Chernivtsi Palace, description=Elegant hotel in a UNESCO World Heritage city, location=Chernivtsi, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Chernivtsi Palace (4 stars) - Chernivtsi (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Uzhgorod Castle View, description=Hotel with views of the historic Uzhhorod Castle, location=Uzhhorod, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Uzhgorod Castle View (4 stars) - Uzhhorod (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Ivano Resort, description=Resort hotel near the Carpathian Mountains, location=Ivano-Frankivsk, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Ivano Resort (4 stars) - Ivano-Frankivsk (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Lutsk Fortress Hotel, description=Hotel near the historic Lubart's Castle, location=Lutsk, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Lutsk Fortress Hotel (3 stars) - Lutsk (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Rivne Plaza, description=Modern hotel in the heart of Rivne, location=Rivne, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Rivne Plaza (3 stars) - Rivne (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Ternopil Lake Hotel, description=Hotel with beautiful views of Ternopil Lake, location=Ternopil, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Ternopil Lake Hotel (4 stars) - Ternopil (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Khmelnytskyi Central, description=Central hotel in the heart of Khmelnytskyi, location=Khmelnytskyi, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Khmelnytskyi Central (3 stars) - Khmelnytskyi (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Vinnytsia Spa Resort, description=Spa resort with modern amenities, location=Vinnytsia, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Vinnytsia Spa Resort (4 stars) - Vinnytsia (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Zhytomyr Inn, description=Comfortable inn in historic Zhytomyr, location=Zhytomyr, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Zhytomyr Inn (3 stars) - Zhytomyr (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Cherkasy River Hotel, description=Hotel with views of the Dnieper River, location=Cherkasy, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Cherkasy River Hotel (3 stars) - Cherkasy (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Poltava Historic Hotel, description=Hotel in the historic center of Poltava, location=Poltava, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Poltava Historic Hotel (4 stars) - Poltava (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Sumy Park Hotel, description=Hotel surrounded by beautiful parks, location=Sumy, rating=3
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Sumy Park Hotel (3 stars) - Sumy (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Chernihiv Ancient Hotel, description=Hotel near ancient churches and monasteries, location=Chernihiv, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Chernihiv Ancient Hotel (4 stars) - Chernihiv (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Paris Luxe, description=Luxury hotel with views of the Eiffel Tower, location=Paris, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Paris Luxe (5 stars) - Paris (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=London Royal, description=Royal experience in the heart of London, location=London, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: London Royal (5 stars) - London (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Roma Palazzo, description=Historic palazzo converted into a luxury hotel, location=Rome, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Roma Palazzo (4 stars) - Rome (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Barcelona Sea View, description=Hotel with stunning Mediterranean views, location=Barcelona, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Barcelona Sea View (4 stars) - Barcelona (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Berlin Modern, description=Contemporary hotel in Germany's capital, location=Berlin, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Berlin Modern (4 stars) - Berlin (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Vienna Classic, description=Classic luxury in the city of music, location=Vienna, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Vienna Classic (5 stars) - Vienna (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Amsterdam Canal House, description=Charming hotel on Amsterdam's famous canals, location=Amsterdam, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Amsterdam Canal House (4 stars) - Amsterdam (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Prague Old Town, description=Hotel in the heart of Prague's Old Town, location=Prague, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Prague Old Town (4 stars) - Prague (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Budapest River Hotel, description=Hotel with views of the Danube River, location=Budapest, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Budapest River Hotel (4 stars) - Budapest (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Warsaw Royal Palace, description=Elegant hotel near Warsaw's Royal Castle, location=Warsaw, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Warsaw Royal Palace (4 stars) - Warsaw (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Stockholm Nordic, description=Nordic design hotel in Sweden's capital, location=Stockholm, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Stockholm Nordic (4 stars) - Stockholm (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Oslo Fjord View, description=Hotel with views of the Oslo Fjord, location=Oslo, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Oslo Fjord View (4 stars) - Oslo (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Copenhagen Harbor, description=Modern hotel at Copenhagen's harbor, location=Copenhagen, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Copenhagen Harbor (4 stars) - Copenhagen (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Helsinki Bay Hotel, description=Hotel overlooking Helsinki Bay, location=Helsinki, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Helsinki Bay Hotel (4 stars) - Helsinki (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Dublin Castle Hotel, description=Historic hotel near Dublin Castle, location=Dublin, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Dublin Castle Hotel (4 stars) - Dublin (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Edinburgh Royal Mile, description=Hotel on Edinburgh's famous Royal Mile, location=Edinburgh, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Edinburgh Royal Mile (4 stars) - Edinburgh (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Lisbon Ocean View, description=Hotel with Atlantic Ocean views, location=Lisbon, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Lisbon Ocean View (4 stars) - Lisbon (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Madrid Plaza Hotel, description=Elegant hotel on Madrid's grand plaza, location=Madrid, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Madrid Plaza Hotel (4 stars) - Madrid (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Athens Acropolis View, description=Hotel with views of the Acropolis, location=Athens, rating=4
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Athens Acropolis View (4 stars) - Athens (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - ENTRY - Args: name=Istanbul Bosphorus, description=Luxury hotel on the Bosphorus Strait, location=Istanbul, rating=5
+2025-06-02 21:56:49 [INFO] DataManager.createHotel - EXIT - Result: Istanbul Bosphorus (5 stars) - Istanbul (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=269c3135-8931-4408-8580-4083de0d2d4a, type=Single, roomNumber=101, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $150.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=269c3135-8931-4408-8580-4083de0d2d4a, type=Double, roomNumber=102, pricePerNight=200.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $200.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=269c3135-8931-4408-8580-4083de0d2d4a, type=Suite, roomNumber=201, pricePerNight=350.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $350.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=bd4cdc3e-8ce1-41a9-b8cc-cb1702b6dc00, type=Double, roomNumber=101, pricePerNight=180.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Double) - $180.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=bd4cdc3e-8ce1-41a9-b8cc-cb1702b6dc00, type=Double, roomNumber=102, pricePerNight=180.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $180.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=bd4cdc3e-8ce1-41a9-b8cc-cb1702b6dc00, type=Suite, roomNumber=201, pricePerNight=300.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $300.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=6e4d865c-4d51-4efc-b2b4-f9747086580c, type=Single, roomNumber=101, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $120.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=6e4d865c-4d51-4efc-b2b4-f9747086580c, type=Double, roomNumber=102, pricePerNight=160.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $160.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=6e4d865c-4d51-4efc-b2b4-f9747086580c, type=Family, roomNumber=201, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family) - $220.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=dd2badc1-d2f0-48a4-8d9e-4b28aed5327a, type=Single, roomNumber=101, pricePerNight=90.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $90.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=dd2badc1-d2f0-48a4-8d9e-4b28aed5327a, type=Double, roomNumber=102, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $120.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=dd2badc1-d2f0-48a4-8d9e-4b28aed5327a, type=Double, roomNumber=201, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Double) - $120.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7fdf78a0-0ec2-4b8a-a857-f5b422c54057, type=Double, roomNumber=101, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Double) - $250.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7fdf78a0-0ec2-4b8a-a857-f5b422c54057, type=Double, roomNumber=102, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7fdf78a0-0ec2-4b8a-a857-f5b422c54057, type=Suite, roomNumber=201, pricePerNight=400.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $400.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7fdf78a0-0ec2-4b8a-a857-f5b422c54057, type=Presidential Suite, roomNumber=202, pricePerNight=800.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 202 (Presidential Suite) - $800.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=241ec20d-25b9-400d-b763-e7aa1936f2ab, type=Deluxe, roomNumber=101, pricePerNight=200.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Deluxe) - $200.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=241ec20d-25b9-400d-b763-e7aa1936f2ab, type=Executive, roomNumber=102, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Executive) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=241ec20d-25b9-400d-b763-e7aa1936f2ab, type=Presidential Suite, roomNumber=201, pricePerNight=500.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Presidential Suite) - $500.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=324c905e-ec9c-4532-b072-273855c968d0, type=Standard, roomNumber=101, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $120.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=324c905e-ec9c-4532-b072-273855c968d0, type=Deluxe, roomNumber=102, pricePerNight=180.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $180.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=324c905e-ec9c-4532-b072-273855c968d0, type=Royal Suite, roomNumber=201, pricePerNight=350.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Royal Suite) - $350.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=f076a1c6-a0f7-4b14-be6d-8ab907df9d08, type=Sea View, roomNumber=101, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Sea View) - $220.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=f076a1c6-a0f7-4b14-be6d-8ab907df9d08, type=Deluxe Sea View, roomNumber=102, pricePerNight=280.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe Sea View) - $280.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=f076a1c6-a0f7-4b14-be6d-8ab907df9d08, type=Pearl Suite, roomNumber=201, pricePerNight=450.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Pearl Suite) - $450.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=376d2149-5ede-4fa8-b4a4-0ab8904af370, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=376d2149-5ede-4fa8-b4a4-0ab8904af370, type=Business, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Business) - $150.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=376d2149-5ede-4fa8-b4a4-0ab8904af370, type=Executive Suite, roomNumber=201, pricePerNight=300.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Executive Suite) - $300.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=0516ed8b-5a76-43f7-92fc-3919e0c71144, type=Standard, roomNumber=101, pricePerNight=80.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $80.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=0516ed8b-5a76-43f7-92fc-3919e0c71144, type=River View, roomNumber=102, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (River View) - $120.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=0516ed8b-5a76-43f7-92fc-3919e0c71144, type=Family Room, roomNumber=201, pricePerNight=180.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Room) - $180.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=25ff36a8-1d35-4eba-a536-13daefda9583, type=Standard, roomNumber=101, pricePerNight=90.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $90.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=25ff36a8-1d35-4eba-a536-13daefda9583, type=Deluxe, roomNumber=102, pricePerNight=140.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $140.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=25ff36a8-1d35-4eba-a536-13daefda9583, type=Family Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=414c9d19-13a4-4e75-954e-cd3eaed4ef35, type=Standard, roomNumber=101, pricePerNight=70.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $70.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=414c9d19-13a4-4e75-954e-cd3eaed4ef35, type=Deluxe, roomNumber=102, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $120.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=414c9d19-13a4-4e75-954e-cd3eaed4ef35, type=Family Suite, roomNumber=201, pricePerNight=200.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $200.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=775ded40-c815-4cc6-86a2-e2d6f8aadcc9, type=Standard, roomNumber=101, pricePerNight=110.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $110.0 per night (execution time: 0ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=775ded40-c815-4cc6-86a2-e2d6f8aadcc9, type=Deluxe, roomNumber=102, pricePerNight=160.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $160.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=775ded40-c815-4cc6-86a2-e2d6f8aadcc9, type=Royal Suite, roomNumber=201, pricePerNight=300.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Royal Suite) - $300.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7d827cd1-c0cb-4ae9-8318-566fbe863c3d, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7d827cd1-c0cb-4ae9-8318-566fbe863c3d, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7d827cd1-c0cb-4ae9-8318-566fbe863c3d, type=Castle Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Castle Suite) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=1506e4ca-55ab-4e28-8b03-094355f47fca, type=Standard, roomNumber=101, pricePerNight=90.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $90.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=1506e4ca-55ab-4e28-8b03-094355f47fca, type=Deluxe, roomNumber=102, pricePerNight=140.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $140.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=1506e4ca-55ab-4e28-8b03-094355f47fca, type=Family Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=5000cb53-8e00-4323-ac0a-8f310d5f2047, type=Standard, roomNumber=101, pricePerNight=80.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $80.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=5000cb53-8e00-4323-ac0a-8f310d5f2047, type=Deluxe, roomNumber=102, pricePerNight=130.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $130.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=5000cb53-8e00-4323-ac0a-8f310d5f2047, type=Family Suite, roomNumber=201, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $220.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=6ec1c080-8462-42ed-849b-1bdffc42f6ec, type=Standard, roomNumber=101, pricePerNight=70.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $70.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=6ec1c080-8462-42ed-849b-1bdffc42f6ec, type=Deluxe, roomNumber=102, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $120.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=6ec1c080-8462-42ed-849b-1bdffc42f6ec, type=Family Suite, roomNumber=201, pricePerNight=200.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $200.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=8522e52c-af5e-47c1-b85b-49d9b97ae650, type=Standard, roomNumber=101, pricePerNight=90.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $90.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=8522e52c-af5e-47c1-b85b-49d9b97ae650, type=Deluxe, roomNumber=102, pricePerNight=140.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $140.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=8522e52c-af5e-47c1-b85b-49d9b97ae650, type=Family Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=e4a38599-7e0a-4886-b195-836e33346520, type=Standard, roomNumber=101, pricePerNight=80.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $80.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=e4a38599-7e0a-4886-b195-836e33346520, type=Deluxe, roomNumber=102, pricePerNight=130.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $130.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=e4a38599-7e0a-4886-b195-836e33346520, type=Family Suite, roomNumber=201, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $220.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=2563c83e-983a-4454-b07d-6451834fb153, type=Standard, roomNumber=101, pricePerNight=70.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $70.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=2563c83e-983a-4454-b07d-6451834fb153, type=Deluxe, roomNumber=102, pricePerNight=120.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $120.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=2563c83e-983a-4454-b07d-6451834fb153, type=Family Suite, roomNumber=201, pricePerNight=200.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $200.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=fabbfbe5-ebea-4664-a85e-a7e78a5b63d0, type=Standard, roomNumber=101, pricePerNight=80.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $80.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=fabbfbe5-ebea-4664-a85e-a7e78a5b63d0, type=Deluxe, roomNumber=102, pricePerNight=130.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $130.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=fabbfbe5-ebea-4664-a85e-a7e78a5b63d0, type=Family Suite, roomNumber=201, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $220.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=8b0ef584-12d8-437b-8976-4f10dbce8edf, type=Standard, roomNumber=101, pricePerNight=90.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $90.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=8b0ef584-12d8-437b-8976-4f10dbce8edf, type=Deluxe, roomNumber=102, pricePerNight=140.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $140.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=8b0ef584-12d8-437b-8976-4f10dbce8edf, type=Family Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $250.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=3ccf26c3-3d13-4c1e-8886-23a303301b4e, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=3ccf26c3-3d13-4c1e-8886-23a303301b4e, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=3ccf26c3-3d13-4c1e-8886-23a303301b4e, type=Family Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=4ccc522f-e8ed-4dfc-83d5-5f44891509e4, type=Standard, roomNumber=101, pricePerNight=80.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $80.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=4ccc522f-e8ed-4dfc-83d5-5f44891509e4, type=Deluxe, roomNumber=102, pricePerNight=130.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $130.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=4ccc522f-e8ed-4dfc-83d5-5f44891509e4, type=Family Suite, roomNumber=201, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $220.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=17b01555-a407-4b86-ae09-36bb2a28d9ab, type=Standard, roomNumber=101, pricePerNight=90.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $90.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=17b01555-a407-4b86-ae09-36bb2a28d9ab, type=Deluxe, roomNumber=102, pricePerNight=140.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $140.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=17b01555-a407-4b86-ae09-36bb2a28d9ab, type=Family Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Family Suite) - $250.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c64116ba-5c58-47d7-94c3-e95cbca7886a, type=Single, roomNumber=101, pricePerNight=300.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $300.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c64116ba-5c58-47d7-94c3-e95cbca7886a, type=Double, roomNumber=102, pricePerNight=400.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $400.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c64116ba-5c58-47d7-94c3-e95cbca7886a, type=Suite, roomNumber=201, pricePerNight=600.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $600.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=df522ae2-c237-430d-8884-762c5ed7a5d1, type=Single, roomNumber=101, pricePerNight=350.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $350.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=df522ae2-c237-430d-8884-762c5ed7a5d1, type=Double, roomNumber=102, pricePerNight=450.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $450.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=df522ae2-c237-430d-8884-762c5ed7a5d1, type=Suite, roomNumber=201, pricePerNight=700.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $700.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c71c413c-51e2-4ca7-bea0-da945ba3ba4e, type=Single, roomNumber=101, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $250.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c71c413c-51e2-4ca7-bea0-da945ba3ba4e, type=Double, roomNumber=102, pricePerNight=350.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $350.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c71c413c-51e2-4ca7-bea0-da945ba3ba4e, type=Suite, roomNumber=201, pricePerNight=550.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $550.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=91fe16ca-c583-4d1c-9ba3-6bb255fe424d, type=Single, roomNumber=101, pricePerNight=280.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $280.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=91fe16ca-c583-4d1c-9ba3-6bb255fe424d, type=Double, roomNumber=102, pricePerNight=380.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $380.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=91fe16ca-c583-4d1c-9ba3-6bb255fe424d, type=Suite, roomNumber=201, pricePerNight=580.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $580.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c28c04fc-824a-47c3-95a7-011dfe98c8fe, type=Single, roomNumber=101, pricePerNight=220.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $220.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c28c04fc-824a-47c3-95a7-011dfe98c8fe, type=Double, roomNumber=102, pricePerNight=320.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $320.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c28c04fc-824a-47c3-95a7-011dfe98c8fe, type=Suite, roomNumber=201, pricePerNight=520.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $520.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=2823d2cf-0c4a-4c3d-ad92-be94e1a95a2e, type=Single, roomNumber=101, pricePerNight=300.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $300.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=2823d2cf-0c4a-4c3d-ad92-be94e1a95a2e, type=Double, roomNumber=102, pricePerNight=400.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $400.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=2823d2cf-0c4a-4c3d-ad92-be94e1a95a2e, type=Suite, roomNumber=201, pricePerNight=600.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $600.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=f40fb892-7400-4bb4-8743-26408b56ce87, type=Single, roomNumber=101, pricePerNight=270.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $270.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=f40fb892-7400-4bb4-8743-26408b56ce87, type=Double, roomNumber=102, pricePerNight=370.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $370.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=f40fb892-7400-4bb4-8743-26408b56ce87, type=Suite, roomNumber=201, pricePerNight=570.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $570.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7303709b-bdfc-427d-8411-a338ae3fa68f, type=Single, roomNumber=101, pricePerNight=260.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $260.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7303709b-bdfc-427d-8411-a338ae3fa68f, type=Double, roomNumber=102, pricePerNight=360.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $360.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=7303709b-bdfc-427d-8411-a338ae3fa68f, type=Suite, roomNumber=201, pricePerNight=560.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $560.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=d5c65bd8-b1be-4935-bdbe-e04349a92362, type=Single, roomNumber=101, pricePerNight=290.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $290.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=d5c65bd8-b1be-4935-bdbe-e04349a92362, type=Double, roomNumber=102, pricePerNight=390.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $390.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=d5c65bd8-b1be-4935-bdbe-e04349a92362, type=Suite, roomNumber=201, pricePerNight=590.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $590.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=9b3e64d8-d615-44b8-afff-c1f63d1f1dee, type=Single, roomNumber=101, pricePerNight=240.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $240.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=9b3e64d8-d615-44b8-afff-c1f63d1f1dee, type=Double, roomNumber=102, pricePerNight=340.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $340.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=9b3e64d8-d615-44b8-afff-c1f63d1f1dee, type=Suite, roomNumber=201, pricePerNight=540.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $540.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=444dbe9c-3003-467b-b0d9-9e8e666317b3, type=Single, roomNumber=101, pricePerNight=310.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $310.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=444dbe9c-3003-467b-b0d9-9e8e666317b3, type=Double, roomNumber=102, pricePerNight=410.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $410.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=444dbe9c-3003-467b-b0d9-9e8e666317b3, type=Suite, roomNumber=201, pricePerNight=610.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $610.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=a68072fc-a2cc-4600-a03d-abda15aca0c7, type=Single, roomNumber=101, pricePerNight=330.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $330.0 per night (execution time: 4ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=a68072fc-a2cc-4600-a03d-abda15aca0c7, type=Double, roomNumber=102, pricePerNight=430.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $430.0 per night (execution time: 4ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=a68072fc-a2cc-4600-a03d-abda15aca0c7, type=Suite, roomNumber=201, pricePerNight=630.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $630.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=1a3c1921-9dcc-4d76-af0a-f8d565488759, type=Single, roomNumber=101, pricePerNight=340.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $340.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=1a3c1921-9dcc-4d76-af0a-f8d565488759, type=Double, roomNumber=102, pricePerNight=440.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $440.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=1a3c1921-9dcc-4d76-af0a-f8d565488759, type=Suite, roomNumber=201, pricePerNight=640.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $640.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=4ce8109f-000c-4723-99ed-31a8d52a4a64, type=Single, roomNumber=101, pricePerNight=320.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $320.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=4ce8109f-000c-4723-99ed-31a8d52a4a64, type=Double, roomNumber=102, pricePerNight=420.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $420.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=4ce8109f-000c-4723-99ed-31a8d52a4a64, type=Suite, roomNumber=201, pricePerNight=620.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $620.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=5f349cde-291b-42cd-9123-dcfbc2f04caf, type=Single, roomNumber=101, pricePerNight=280.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Single) - $280.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=5f349cde-291b-42cd-9123-dcfbc2f04caf, type=Double, roomNumber=102, pricePerNight=380.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Double) - $380.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=5f349cde-291b-42cd-9123-dcfbc2f04caf, type=Suite, roomNumber=201, pricePerNight=580.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $580.0 per night (execution time: 1ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=a864392d-868e-4650-897e-efa90b449e4c, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=a864392d-868e-4650-897e-efa90b449e4c, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=a864392d-868e-4650-897e-efa90b449e4c, type=Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $250.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=3b8e3164-7a1a-485a-b597-c4dea33cc062, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 3ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=3b8e3164-7a1a-485a-b597-c4dea33cc062, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=3b8e3164-7a1a-485a-b597-c4dea33cc062, type=Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $250.0 per night (execution time: 3ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=55068b21-4a9e-404b-8407-6c0172c95fa9, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=55068b21-4a9e-404b-8407-6c0172c95fa9, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=55068b21-4a9e-404b-8407-6c0172c95fa9, type=Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $250.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=b85c7a1d-cf75-4f80-a1af-b0699980eae2, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=b85c7a1d-cf75-4f80-a1af-b0699980eae2, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=b85c7a1d-cf75-4f80-a1af-b0699980eae2, type=Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $250.0 per night (execution time: 4ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=800f0579-ebc9-4cea-a071-0c1a3af42250, type=Standard, roomNumber=101, pricePerNight=100.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 101 (Standard) - $100.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=800f0579-ebc9-4cea-a071-0c1a3af42250, type=Deluxe, roomNumber=102, pricePerNight=150.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 102 (Deluxe) - $150.0 per night (execution time: 2ms)
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=800f0579-ebc9-4cea-a071-0c1a3af42250, type=Suite, roomNumber=201, pricePerNight=250.0
+2025-06-02 21:56:49 [INFO] DataManager.createRoom - EXIT - Result: Room 201 (Suite) - $250.0 per night (execution time: 2ms)
+Logging system initialized at 2025-06-02 23:35:38
+2025-06-02 23:36:10 [INFO] DataManager.createBooking - ENTRY - Args: userId=3932d565-691c-4b15-9696-ccabf32fabd9, roomId=0edfe46b-2ac6-4c6b-bb99-914c0193b5e7, checkInDate=2025-06-02, checkOutDate=2025-06-03
+2025-06-02 23:36:10 [INFO] DataManager.createBooking - EXIT - Result: Booking for Administrator at Vienna Classic, Room 102 from 2025-06-02 to 2025-06-03 (execution time: 4ms)

@@ -4,6 +4,9 @@ import Models.Hotel;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Utility class for searching and sorting operations.
@@ -12,14 +15,76 @@ import java.util.List;
 public class SearchAndSort {
 
     /**
-     * Sorts a list using a merge sort algorithm.
+     * Cache for memoized merge sort results.
+     * This map stores previously computed sort results to avoid redundant computation.
+     */
+    private static final Map<Integer, List<?>> MERGE_SORT_CACHE = new ConcurrentHashMap<>();
+
+    /**
+     * Input class for the memoized merge sort function.
+     * This class encapsulates the input parameters and provides proper equals and hashCode methods.
+     */
+    private static class MergeSortInput<T> {
+        private final List<T> list;
+        private final Comparator<T> comparator;
+
+        public MergeSortInput(List<T> list, Comparator<T> comparator) {
+            this.list = list;
+            this.comparator = comparator;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            MergeSortInput<?> that = (MergeSortInput<?>) o;
+            return Objects.equals(list, that.list) &&
+                   Objects.equals(comparator, that.comparator);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(list, comparator);
+        }
+    }
+
+    /**
+     * Sorts a list using a merge sort algorithm with memoization.
+     * This public method uses caching for better performance.
      *
      * @param <T> the type of elements in the list
      * @param list the list to be sorted
      * @param comparator the comparator to determine the order of the list
      * @return a new sorted list
      */
+    @SuppressWarnings("unchecked")
     public static <T> List<T> mergeSort(List<T> list, Comparator<T> comparator) {
+        // Create a key for the cache based on the list and comparator
+        MergeSortInput<T> input = new MergeSortInput<>(list, comparator);
+        int cacheKey = input.hashCode();
+
+        // Check if the result is already in the cache
+        if (MERGE_SORT_CACHE.containsKey(cacheKey)) {
+            return (List<T>) MERGE_SORT_CACHE.get(cacheKey);
+        }
+
+        // If not in cache, compute the result and store it
+        List<T> result = mergeSortImpl(list, comparator);
+        MERGE_SORT_CACHE.put(cacheKey, result);
+
+        return result;
+    }
+
+    /**
+     * Implementation of the merge sort algorithm.
+     * This is the actual implementation that gets memoized.
+     *
+     * @param <T> the type of elements in the list
+     * @param list the list to be sorted
+     * @param comparator the comparator to determine the order of the list
+     * @return a new sorted list
+     */
+    private static <T> List<T> mergeSortImpl(List<T> list, Comparator<T> comparator) {
         // Base case: lists of size 0 or 1 are already sorted
         if (list.size() <= 1) {
             return new ArrayList<>(list);
@@ -33,8 +98,8 @@ public class SearchAndSort {
         List<T> right = new ArrayList<>(list.subList(middle, list.size()));
 
         // Recursively sort both halves
-        left = mergeSort(left, comparator);
-        right = mergeSort(right, comparator);
+        left = mergeSortImpl(left, comparator);
+        right = mergeSortImpl(right, comparator);
 
         // Merge the sorted halves
         return merge(left, right, comparator);

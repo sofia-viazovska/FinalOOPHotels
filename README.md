@@ -160,6 +160,11 @@ A utility class for searching and sorting operations.
 - sortHotelsByName() - Sorts a list of hotels by name (ascending)
 - searchHotelByName() - Searches for a hotel by name using binary search
 
+#### Memoizer:
+A utility class that provides memoization functionality.
+- memoize() - Creates a memoized version of a function
+- memoizeWithKey() - Creates a memoized version of a function with a custom key mapper
+
 #### DataFileViewer:
 A utility class for viewing the contents of data files.
 - viewDataFile() - Opens a file chooser to select and view a data file
@@ -325,3 +330,124 @@ Controller for the welcome view.
 - showHotelsView() - Handles the action to show the hotels view
 - showLoginView() - Handles the action to show the login view
 - showRegisterView() - Handles the action to show the registration view
+
+## Memoization in the Hotel Booking System
+
+### What is Memoization?
+
+Memoization is an optimization technique used to speed up programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again. It's a form of caching that can significantly improve performance for functions that:
+
+1. Are computationally expensive
+2. Are called repeatedly with the same inputs
+3. Are pure functions (same input always produces the same output)
+
+### Where is Memoization Used in the Project?
+
+The Hotel Booking System implements memoization in several key areas:
+
+1. **Generic Memoization Utility (`Memoizer` class)**
+   - Provides reusable memoization functionality for any function
+   - Located in `Models.Utils.Memoizer`
+
+2. **Hotel Lookup by ID (`DataManager` class)**
+   - Caches hotel objects by their ID for faster retrieval
+   - Implemented in `getHotelById()` method
+
+3. **Merge Sort Algorithm (`SearchAndSort` class)**
+   - Caches sorted lists to avoid redundant sorting operations
+   - Implemented in `mergeSort()` method
+
+### Why is Memoization Beneficial?
+
+1. **Performance Improvement**
+   - Reduces computation time by avoiding redundant calculations
+   - Particularly valuable for expensive operations like sorting
+
+2. **Reduced Resource Usage**
+   - Decreases CPU usage for repeated operations
+   - Trades memory for speed (space-time tradeoff)
+
+3. **Responsiveness**
+   - Improves application responsiveness, especially for UI operations
+   - Critical for operations that may block the user interface
+
+### How is Memoization Implemented?
+
+#### 1. Generic Memoization (`Memoizer` class)
+
+The `Memoizer` class provides two methods for creating memoized functions:
+
+- `memoize(Function<T, R> function)`: Creates a memoized version of a function using the input as the cache key
+- `memoizeWithKey(Function<T, R> function, Function<T, K> keyMapper)`: Creates a memoized function with a custom key mapper
+
+Both methods use `ConcurrentHashMap` for thread-safe caching.
+
+#### 2. Hotel Lookup Caching (`DataManager` class)
+
+The `DataManager` class maintains a cache of hotels by their ID:
+
+- Cache is initialized as: `private final Map<String, Hotel> hotelCache = new ConcurrentHashMap<>();`
+- The cache is properly maintained throughout CRUD operations (create, read, update, delete)
+- The `getHotelById()` method checks the cache first before searching the hotels list
+
+#### 3. Merge Sort Caching (`SearchAndSort` class)
+
+The `SearchAndSort` class caches sorted lists to avoid redundant sorting:
+
+- Cache is initialized as: `private static final Map<Integer, List<?>> MERGE_SORT_CACHE = new ConcurrentHashMap<>();`
+- A custom `MergeSortInput` class is used to create cache keys based on the list and comparator
+- The `mergeSort()` method checks the cache before performing the sort operation
+
+### Examples of Memoization Usage
+
+#### Example 1: Using the Memoizer Utility
+
+```java
+// Create a memoized version of an expensive function
+Function<String, Integer> expensiveCalculation = input -> {
+    // Simulate expensive computation
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+    return input.length();
+};
+
+// Memoize the function
+Function<String, Integer> memoizedCalculation = Memoizer.memoize(expensiveCalculation);
+
+// First call (slow)
+long start = System.currentTimeMillis();
+int result1 = memoizedCalculation.apply("test");
+long end = System.currentTimeMillis();
+System.out.println("First call: " + (end - start) + "ms");
+
+// Second call with same input (fast, uses cache)
+start = System.currentTimeMillis();
+int result2 = memoizedCalculation.apply("test");
+end = System.currentTimeMillis();
+System.out.println("Second call: " + (end - start) + "ms");
+```
+
+#### Example 2: Hotel Lookup Caching
+
+```java
+// First lookup (might need to search through the list)
+Hotel hotel1 = dataManager.getHotelById("123");
+
+// Second lookup with same ID (fast, uses cache)
+Hotel hotel2 = dataManager.getHotelById("123");
+```
+
+#### Example 3: Merge Sort Caching
+
+```java
+List<Hotel> hotels = dataManager.getAllHotels();
+
+// First sort (performs the full merge sort)
+List<Hotel> sortedByName1 = SearchAndSort.sortHotelsByName(hotels);
+
+// Second sort of the same list (fast, uses cache)
+List<Hotel> sortedByName2 = SearchAndSort.sortHotelsByName(hotels);
+```

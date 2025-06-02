@@ -3,6 +3,7 @@ package Models;
 import Models.DataStructures.LinkedList;
 import Models.Utils.Logging.Log;
 import Models.Utils.Logging.LogLevel;
+import Models.Utils.Memoizer;
 import java.io.*;
 import java.nio.file.Files;
 import java.time.temporal.ChronoUnit;
@@ -12,6 +13,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Function;
 
 /**
  * Handles data persistence for the application.
@@ -29,6 +32,9 @@ public class DataManager {
     private List<Room> rooms;
     private List<Booking> bookings;
     private LinkedList<Hotel> recentlyViewedHotels;
+
+    // Cache for hotel lookups by ID
+    private final Map<String, Hotel> hotelCache = new ConcurrentHashMap<>();
 
     public DataManager() {
         this.users = new ArrayList<>();
@@ -358,6 +364,8 @@ public class DataManager {
                     String id = UUID.randomUUID().toString();
                     Hotel hotel = new Hotel(id, name, location, rating, description);
                     hotels.add(hotel);
+                    // Add to cache when created
+                    hotelCache.put(id, hotel);
                     saveHotels();
                     return hotel;
                 },
@@ -379,12 +387,29 @@ public class DataManager {
         return null;
     }
 
+    /**
+     * Gets a hotel by its ID with memoization.
+     * This method caches results to improve performance for repeated lookups.
+     *
+     * @param id the ID of the hotel to find
+     * @return the hotel with the given ID, or null if not found
+     */
     public Hotel getHotelById(String id) {
+        // Check the cache first
+        if (hotelCache.containsKey(id)) {
+            return hotelCache.get(id);
+        }
+
+        // If not in cache, search in the hotels list
         for (Hotel hotel : hotels) {
             if (hotel.getId().equals(id)) {
+                // Store in cache for future lookups
+                hotelCache.put(id, hotel);
                 return hotel;
             }
         }
+
+        // Not found
         return null;
     }
 
@@ -396,6 +421,8 @@ public class DataManager {
         for (int i = 0; i < hotels.size(); i++) {
             if (hotels.get(i).getId().equals(hotel.getId())) {
                 hotels.set(i, hotel);
+                // Update the cache with the new hotel
+                hotelCache.put(hotel.getId(), hotel);
                 saveHotels();
                 return;
             }
@@ -404,6 +431,8 @@ public class DataManager {
 
     public void deleteHotel(String id) {
         hotels.removeIf(hotel -> hotel.getId().equals(id));
+        // Remove from cache when deleted
+        hotelCache.remove(id);
         saveHotels();
     }
 
@@ -652,6 +681,8 @@ public class DataManager {
                 }
                 if (!isDuplicate) {
                     hotels.add(hotel);
+                    // Add to cache when loaded
+                    hotelCache.put(hotel.getId(), hotel);
                 }
             }
 
@@ -824,6 +855,9 @@ public class DataManager {
         hotels.clear();
         rooms.clear();
         bookings.clear();
+
+        // Clear the cache
+        hotelCache.clear();
 
         // Remove data files to start fresh
         deleteFile(HOTELS_FILE);
