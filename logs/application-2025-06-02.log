@@ -1,0 +1,9 @@
+Logging system initialized at 2025-06-02 20:47:47
+2025-06-02 20:48:16 [INFO] DataManager.createBooking - ENTRY - Args: roomId=d422ff81-90f4-471a-a0ad-791f1a9ecc8e, checkInDate=2025-06-02, checkOutDate=2025-06-03, userId=083eac58-5a91-4982-8d37-aeab5beed935
+2025-06-02 20:48:16 [INFO] DataManager.createBooking - EXIT - Result: Booking for Administrator at Seaside Resort Spa, Room 102 from 2025-06-02 to 2025-06-03 (execution time: 5ms)
+2025-06-02 20:48:55 [INFO] DataManager.createHotel - ENTRY - Args: name=Obshaga KPI, description=OKAK, location=Kyiv, rating=3
+2025-06-02 20:48:55 [INFO] DataManager.createHotel - EXIT - Result: Obshaga KPI (3 stars) - Kyiv (execution time: 0ms)
+2025-06-02 20:50:39 [INFO] DataManager.createRoom - ENTRY - Args: hotelId=c3276024-001d-455f-ac13-86f337fece1f, type=Suite, roomNumber=105, pricePerNight=135.0
+2025-06-02 20:50:39 [INFO] DataManager.createRoom - EXIT - Result: Room 105 (Suite) - $135.0 per night (execution time: 144ms)
+2025-06-02 20:51:04 [INFO] ManageBookingsController.handleConfirm - ENTRY - Args: none
+2025-06-02 20:51:06 [INFO] ManageBookingsController.handleConfirm - EXIT - Result: null (execution time: 1195ms)

@@ -1,6 +1,11 @@
 package App;
 
 import Models.DataManager;
+import Models.Utils.Logging.ConsoleLogDestination;
+import Models.Utils.Logging.DefaultLogFormatter;
+import Models.Utils.Logging.FileLogDestination;
+import Models.Utils.Logging.LogLevel;
+import Models.Utils.Logging.LogManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -18,6 +23,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // Initialize the logging system
+        initializeLogging();
+
         // Initialize the data manager
         dataManager = new DataManager();
 
@@ -42,5 +50,35 @@ public class Main extends Application {
 
     public static DataManager getDataManager() {
         return dataManager;
+    }
+
+    /**
+     * Initialize the logging system with console and file destinations.
+     */
+    private void initializeLogging() {
+        // Get the singleton instance
+        LogManager logManager = LogManager.getInstance();
+
+        // Clear any existing destinations
+        logManager.clearDestinations();
+
+        // Add console destination
+        logManager.addDestination(new ConsoleLogDestination());
+
+        // Add file destination with date in filename
+        String logFileName = "logs/application-" +
+                             java.time.LocalDate.now().toString() + ".log";
+        logManager.addDestination(new FileLogDestination(logFileName));
+
+        // Set default formatter
+        logManager.setFormatter(new DefaultLogFormatter());
+
+        // Set minimum log level
+        logManager.setMinLevel(LogLevel.INFO);
+
+        // Log initialization
+        logManager.log("Logging system initialized at " +
+                       java.time.LocalDateTime.now().format(
+                           java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
     }
 }

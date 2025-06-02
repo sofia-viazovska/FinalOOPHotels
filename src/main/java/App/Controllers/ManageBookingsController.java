@@ -2,12 +2,16 @@ package App.Controllers;
 
 import Models.Booking;
 import Models.DataManager;
+import Models.Utils.Logging.Log;
+import Models.Utils.Logging.LogLevel;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.util.HashMap;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -205,19 +209,33 @@ public class ManageBookingsController {
     }
 
     @FXML
+    @Log(level = LogLevel.INFO)
     private void handleConfirm() {
-        if (selectedBooking == null) {
-            showAlert("No Selection", "Please select a booking to confirm.", Alert.AlertType.WARNING);
-            return;
+        try {
+            Log.Decorator.withLoggingVoid(
+                LogLevel.INFO,
+                () -> {
+                    if (selectedBooking == null) {
+                        showAlert("No Selection", "Please select a booking to confirm.", Alert.AlertType.WARNING);
+                        return;
+                    }
+
+                    selectedBooking.setConfirmed(true);
+                    dataManager.updateBooking(selectedBooking);
+
+                    // Refresh the list
+                    loadBookings();
+                    clearFields();
+
+                    showAlert("Booking Confirmed", "Booking has been confirmed successfully.", Alert.AlertType.INFORMATION);
+                },
+                "handleConfirm",
+                "ManageBookingsController",
+                new HashMap<>()
+            );
+        } catch (Exception e) {
+            showAlert("Error", "Failed to confirm booking: " + e.getMessage(), Alert.AlertType.ERROR);
         }
-
-        selectedBooking.setConfirmed(true);
-        dataManager.updateBooking(selectedBooking);
-
-        // Refresh the list
-        loadBookings();
-
-        showAlert("Booking Confirmed", "Booking has been confirmed successfully.", Alert.AlertType.INFORMATION);
     }
 
     @FXML

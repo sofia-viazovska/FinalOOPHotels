@@ -1,10 +1,15 @@
 package Models;
 
 import Models.DataStructures.LinkedList;
+import Models.Utils.Logging.Log;
+import Models.Utils.Logging.LogLevel;
 import java.io.*;
 import java.nio.file.Files;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.UUID;
 
@@ -337,19 +342,32 @@ public class DataManager {
     }
 
     // CRUD operations for Hotel
+    @Log(level = LogLevel.INFO)
     public Hotel createHotel(String name, String location, int rating, String description) {
-        // Check if a hotel with the same name already exists
-        Hotel existingHotel = getHotelByName(name);
-        if (existingHotel != null) {
-            return existingHotel;
-        }
+        try {
+            return Log.Decorator.withLogging(
+                LogLevel.INFO,
+                () -> {
+                    // Check if a hotel with the same name already exists
+                    Hotel existingHotel = getHotelByName(name);
+                    if (existingHotel != null) {
+                        return existingHotel;
+                    }
 
-        // Create a new hotel if one with the same name doesn't exist
-        String id = UUID.randomUUID().toString();
-        Hotel hotel = new Hotel(id, name, location, rating, description);
-        hotels.add(hotel);
-        saveHotels();
-        return hotel;
+                    // Create a new hotel if one with the same name doesn't exist
+                    String id = UUID.randomUUID().toString();
+                    Hotel hotel = new Hotel(id, name, location, rating, description);
+                    hotels.add(hotel);
+                    saveHotels();
+                    return hotel;
+                },
+                "createHotel",
+                "DataManager",
+                Map.of("name", name, "location", location, "rating", rating, "description", description)
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to create hotel", e);
+        }
     }
 
     public Hotel getHotelByName(String name) {
@@ -390,16 +408,29 @@ public class DataManager {
     }
 
     // CRUD operations for Room
+    @Log(level = LogLevel.INFO)
     public Room createRoom(String hotelId, String roomNumber, String type, double pricePerNight) {
-        String id = UUID.randomUUID().toString();
-        Room room = new Room(id, roomNumber, type, pricePerNight);
-        Hotel hotel = getHotelById(hotelId);
-        if (hotel != null) {
-            hotel.addRoom(room);
+        try {
+            return Log.Decorator.withLogging(
+                LogLevel.INFO,
+                () -> {
+                    String id = UUID.randomUUID().toString();
+                    Room room = new Room(id, roomNumber, type, pricePerNight);
+                    Hotel hotel = getHotelById(hotelId);
+                    if (hotel != null) {
+                        hotel.addRoom(room);
+                    }
+                    rooms.add(room);
+                    saveRooms();
+                    return room;
+                },
+                "createRoom",
+                "DataManager",
+                Map.of("hotelId", hotelId, "roomNumber", roomNumber, "type", type, "pricePerNight", pricePerNight)
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to create room", e);
         }
-        rooms.add(room);
-        saveRooms();
-        return room;
     }
 
     public Room getRoomById(String id) {
@@ -441,21 +472,39 @@ public class DataManager {
     }
 
     // CRUD operations for Booking
+    @Log(level = LogLevel.INFO)
     public Booking createBooking(String userId, String roomId, java.time.LocalDate checkInDate, java.time.LocalDate checkOutDate) {
-        String id = UUID.randomUUID().toString();
-        User user = getUserById(userId);
-        Room room = getRoomById(roomId);
+        try {
+            return Log.Decorator.withLogging(
+                LogLevel.INFO,
+                () -> {
+                    String id = UUID.randomUUID().toString();
+                    User user = getUserById(userId);
+                    Room room = getRoomById(roomId);
 
-        if (user == null || room == null) {
-            return null;
+                    if (user == null || room == null) {
+                        return null;
+                    }
+
+                    // Calculate total price based on number of nights
+                    long nights = ChronoUnit.DAYS.between(checkInDate, checkOutDate);
+                    double totalPrice = nights * room.getPricePerNight();
+
+                    Booking booking = new Booking(id, user, room, checkInDate, checkOutDate);
+                    user.addBooking(booking);
+                    room.addBooking(booking);
+                    bookings.add(booking);
+                    saveBookings();
+                    saveBookingToFile(booking);
+                    return booking;
+                },
+                "createBooking",
+                "DataManager",
+                Map.of("userId", userId, "roomId", roomId, "checkInDate", checkInDate, "checkOutDate", checkOutDate)
+            );
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to create booking", e);
         }
-
-        Booking booking = new Booking(id, user, room, checkInDate, checkOutDate);
-        user.addBooking(booking);
-        room.addBooking(booking);
-        bookings.add(booking);
-        saveBookings();
-        return booking;
     }
 
     public Booking getBookingById(String id) {
