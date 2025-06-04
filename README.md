@@ -451,3 +451,97 @@ List<Hotel> sortedByName1 = SearchAndSort.sortHotelsByName(hotels);
 // Second sort of the same list (fast, uses cache)
 List<Hotel> sortedByName2 = SearchAndSort.sortHotelsByName(hotels);
 ```
+
+### Cache Clearing Strategies
+
+As applications run, caches can grow large and consume significant memory. The Hotel Booking System implements several strategies to manage cache size and optimize memory usage:
+
+#### Available Cache Clearing Strategies
+
+1. **LRU (Least Recently Used)**
+   - Removes entries that haven't been accessed recently
+   - Prioritizes keeping frequently accessed entries in the cache
+   - Ideal for data with temporal locality (recently used items are likely to be used again)
+   - Implemented using access timestamps for each cache entry
+
+2. **LFU (Least Frequently Used)**
+   - Removes entries that have been accessed least frequently
+   - Prioritizes keeping popular entries in the cache regardless of when they were last accessed
+   - Ideal for data with frequency-based access patterns
+   - Implemented using access counters for each cache entry
+
+3. **TIME_BASED**
+   - Removes the oldest entries based on creation time
+   - Simple strategy that assumes newer entries are more valuable than older ones
+   - Ideal for time-sensitive data where relevance decreases with age
+   - Implemented using creation timestamps for each cache entry
+
+4. **ALL**
+   - Clears all cache entries at once
+   - Simple but drastic approach
+   - Useful for scenarios where the entire cache needs to be invalidated
+
+#### Implementation Details
+
+The cache clearing functionality is implemented in the `Memoizer` class:
+
+- Each cache entry is tracked with metadata including:
+  - Last access time
+  - Access count
+  - Creation time
+
+- The `clearCaches(CacheStrategy strategy, int percentage)` method clears a specified percentage of cache entries using the selected strategy.
+
+- The `checkAndClearCaches(int bookingsCount, int threshold, CacheStrategy strategy, int percentage)` method checks if a threshold is exceeded and clears caches if needed.
+
+#### Usage in the Application
+
+The Hotel Booking System uses different cache clearing strategies in different contexts:
+
+1. **When Creating Bookings**
+   - Uses LRU strategy to clear 30% of least recently used entries
+   - Implemented in `DataManager.createBooking()` method
+   - Example: `Memoizer.checkAndClearCaches(bookings.size(), 15, Memoizer.CacheStrategy.LRU, 30);`
+
+2. **When Deleting Bookings**
+   - Uses LFU strategy to clear 25% of least frequently used entries
+   - Implemented in `DataManager.deleteBooking()` method
+   - Example: `Memoizer.checkAndClearCaches(bookings.size(), 15, Memoizer.CacheStrategy.LFU, 25);`
+
+3. **When Loading Bookings**
+   - Uses TIME_BASED strategy to clear 40% of oldest entries
+   - Implemented in `DataManager.loadBookings()` method
+   - Example: `Memoizer.checkAndClearCaches(bookings.size(), 15, Memoizer.CacheStrategy.TIME_BASED, 40);`
+
+#### Benefits of Multiple Cache Clearing Strategies
+
+1. **Optimized Memory Usage**
+   - Prevents excessive memory consumption by controlling cache size
+   - Different strategies can be applied based on the specific use case
+
+2. **Improved Cache Efficiency**
+   - Keeps the most valuable entries in the cache based on usage patterns
+   - Removes entries that are less likely to be needed
+
+3. **Flexible Configuration**
+   - Strategies can be selected based on the specific requirements of each operation
+   - Percentage of entries to clear can be adjusted for fine-tuned control
+
+#### Example: Using Cache Clearing Strategies
+
+```java
+// Example of using LRU strategy to clear 30% of cache entries
+Memoizer.clearCaches(Memoizer.CacheStrategy.LRU, 30);
+
+// Example of using LFU strategy to clear 25% of cache entries
+Memoizer.clearCaches(Memoizer.CacheStrategy.LFU, 25);
+
+// Example of using TIME_BASED strategy to clear 40% of cache entries
+Memoizer.clearCaches(Memoizer.CacheStrategy.TIME_BASED, 40);
+
+// Example of clearing all cache entries
+Memoizer.clearCaches(Memoizer.CacheStrategy.ALL, 100);
+
+// Example of conditional cache clearing based on a threshold
+Memoizer.checkAndClearCaches(bookingsCount, 15, Memoizer.CacheStrategy.LRU, 30);
+```

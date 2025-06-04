@@ -525,6 +525,11 @@ public class DataManager {
                     bookings.add(booking);
                     saveBookings();
                     saveBookingToFile(booking);
+
+                    // Check if we need to clear caches based on the number of bookings
+                    // If there are more than 15 bookings in the system, clear caches using LRU strategy
+                    Memoizer.checkAndClearCaches(bookings.size(), 15, Memoizer.CacheStrategy.LRU, 30);
+
                     return booking;
                 },
                 "createBooking",
@@ -591,6 +596,11 @@ public class DataManager {
         }
         bookings.removeIf(b -> b.getId().equals(id));
         saveBookings();
+
+        // Check if we need to clear caches based on the number of bookings
+        // This is less likely to be needed when deleting, but included for consistency
+        // Use LFU strategy to keep frequently used entries
+        Memoizer.checkAndClearCaches(bookings.size(), 15, Memoizer.CacheStrategy.LFU, 25);
     }
 
     // File I/O operations
@@ -644,7 +654,6 @@ public class DataManager {
         }
     }
 
-    @SuppressWarnings("unchecked")
     private void loadUsers() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(USERS_FILE))) {
             users = (List<User>) ois.readObject();
@@ -796,6 +805,10 @@ public class DataManager {
                 e.printStackTrace();
             }
         }
+
+        // Check if we need to clear caches based on the number of bookings after loading
+        // Use TIME_BASED strategy to clear oldest entries when loading bookings
+        Memoizer.checkAndClearCaches(bookings.size(), 15, Memoizer.CacheStrategy.TIME_BASED, 40);
     }
 
     /**
